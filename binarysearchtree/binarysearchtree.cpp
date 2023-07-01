@@ -44,7 +44,11 @@ public:
 		}
 		if (element < parent->info)//  if the valuein the data field pf the new node is less than of the parent
 		{
-
+			parent->leftchild = newNode; // make the left child of the parent point to the new node
+		}
+		else if (element > parent->info)// if the value in the data field of the new node is geater than that of the parent
+		{
+			parent->rightchild = newNode; // make the right of the parent point to the  new node
 		}
 	}
 };

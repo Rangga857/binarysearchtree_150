@@ -3,7 +3,11 @@
 
 using namespace std;
 
-class node {
+class Node {
 public :
 	string info;
+	Node* leftchild;
+	
+
+
 };

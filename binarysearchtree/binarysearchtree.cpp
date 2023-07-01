@@ -37,7 +37,7 @@ public:
 		Node* currentNode = NULL;
 		search(element, parent, currentNode); //locate the node which will be the parent of node to be inserted
 
-		if (parent = NULL)// if the parent is NULL (tree is empty)
+		if (parent == NULL)// if the parent is NULL (tree is empty)
 		{
 			ROOT = newNode; // Mark the new node as root
 			return;// exit
@@ -73,5 +73,47 @@ public:
 			cout << "Tree is empty" << endl;
 			return;
 		}
+		if (ptr != NULL)
+		{
+			inorder(ptr->leftchild);
+			cout << ptr->info << " ";
+			inorder(ptr->rightchild);
+		}
+	}
+
+	void preorder(Node* ptr)
+	{
+		if (ROOT == NULL)
+		{
+			cout << "Tree is empty" << endl;
+			return;
+		}
+		if (ptr != NULL)
+		{
+			cout << ptr->info << " ";
+			preorder(ptr->leftchild);
+			preorder(ptr->rightchild);
+		}
+	}
+
+	void postorder(Node* ptr)
+	{
+		//perfoms the postorder traversal of the tree
+		if (ROOT == NULL)
+		{
+			cout << "Tree is empty" << endl;
+			return;
+		}
+		if (ptr != NULL)
+		{
+			postorder(ptr->leftchild);
+			postorder(ptr->rightchild);
+			cout << ptr->info << " ";
+		}
 	}
 };
+
+int main()
+{
+	BinaryTree obj;
+}

@@ -25,4 +25,9 @@ public:
 	BinaryTree() {
 		ROOT = NULL; //initializing ROOT to null
 	}
+
+	void insert(string element) //inset a node in the binary search tree
+	{
+
+	}
 };
